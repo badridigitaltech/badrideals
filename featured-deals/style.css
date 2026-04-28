@@ -1,0 +1,133 @@
+<style>
+
+/* LAYOUT */
+.deal-item{
+flex:1 1 48%;
+text-decoration:none;
+color:#222;
+}
+
+/* CARD */
+.deal-card{
+display:flex;
+gap:12px;
+padding:12px;
+border-radius:12px;
+position:relative;
+transition:0.25s ease;
+}
+
+.deal-card:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.deal-card:active{
+transform:scale(0.97);
+}
+
+/* IMAGE */
+.deal-card img{
+width:85px;
+border-radius:8px;
+}
+
+/* TEXT */
+.title{
+font-size:14px;
+font-weight:600;
+}
+
+.price{
+margin-top:4px;
+}
+
+.price strong{
+color:#000;
+}
+
+.mrp{
+font-size:12px;
+color:#777;
+}
+
+.mrp span{
+text-decoration:line-through;
+}
+
+/* BUTTON */
+.deal-btn{
+display:inline-block;
+margin-top:6px;
+background:#ff9800;
+color:#fff;
+padding:6px 14px;
+border-radius:20px;
+font-size:12px;
+font-weight:600;
+transition:0.2s;
+}
+
+.deal-btn:hover{
+background:#fb8c00;
+transform:scale(1.05);
+}
+
+/* BADGE */
+.discount-badge{
+position:absolute;
+top:8px;
+right:10px;
+background:#e53935;
+color:#fff;
+font-size:11px;
+padding:4px 8px;
+border-radius:20px;
+font-weight:600;
+}
+
+/* TRUST BOX */
+.trust-box{
+max-width:1000px;
+margin:18px auto 0;
+background:#fff3e0;
+border-left:5px solid #ff9800;
+padding:12px 14px;
+border-radius:10px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:6px;
+font-size:13px;
+font-weight:600;
+color:#333;
+}
+
+.updated-badge{
+background:#4caf50;
+color:#fff;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:700;
+}
+
+/* ✅ MOBILE FIX (IMPORTANT) */
+@media (max-width:600px){
+
+.deal-item{
+flex:1 1 100%;
+}
+
+.deal-card{
+padding:10px;
+}
+
+.deal-card img{
+width:75px;
+}
+
+}
+
+</style>
