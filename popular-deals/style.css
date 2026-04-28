@@ -1,0 +1,137 @@
+<style>
+/* SECTION BACKGROUND */
+.bd-section.popular-section {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+}
+
+/* HEADING */
+.bd-heading {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* GRID */
+.bd-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* CARD (SOFT MINT STYLE) */
+.bd-card {
+  background: #f3fbf8 !important;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #e2f1ec;
+  text-decoration: none !important;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* IMAGE */
+.bd-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.bd-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+/* PRICE (FIXED GAP) */
+.deal-price {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 2px;
+}
+
+.old-price {
+  font-size: 13px;
+  color: #888;
+  text-decoration: line-through;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.deal-btn {
+  display: inline-block;
+  background: #f59e0b;
+  color: #000;
+  padding: 7px 16px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* BADGES */
+.bd-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.bd-badge.hot {
+  background: rgba(255,82,82,0.12);
+  color: #d32f2f;
+}
+
+.bd-badge.best {
+  background: rgba(255,167,38,0.15);
+  color: #ef6c00;
+}
+
+.bd-badge.trending {
+  background: rgba(66,165,245,0.15);
+  color: #1976d2;
+}
+
+.bd-badge.value {
+  background: rgba(102,187,106,0.15);
+  color: #2e7d32;
+}
+
+/* HOVER */
+.bd-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  background: #ffffff;
+}
+
+/* INFO BAR */
+.deal-info {
+  margin-top: 20px;
+  background: #efe3c7;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .bd-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bd-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
