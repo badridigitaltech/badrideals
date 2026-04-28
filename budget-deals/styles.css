@@ -1,0 +1,201 @@
+/* =========================
+   LOWEST DEALS - VISUAL VARIATION
+========================= */
+
+.bd-list-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* CARD - DIFFERENT STYLE */
+.bd-list-card{
+  display: block;
+  background: #f9fbff; /* soft tinted bg */
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left; /* change from center */
+  text-decoration: none !important;
+  color: #222 !important;
+  position: relative;
+  transition: 0.25s ease;
+}
+
+/* LEFT ACCENT LINE */
+.bd-list-card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  border-radius: 4px;
+  background: #ffcc00;
+}
+
+/* HOVER */
+.bd-list-card:hover{
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* IMAGE */
+.bd-list-card img{
+  width: 80px;
+  float: right; /* key difference */
+}
+
+/* TITLE */
+.bd-list-card h3{
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+/* DEAL PRICE */
+.bd-list-card .deal-price{
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+/* MRP */
+.bd-list-card .old-price{
+  font-size: 12px;
+  color: #9e9e9e;
+  text-decoration: line-through;
+}
+
+/* BUTTON */
+.bd-list-card .deal-btn{
+  display: inline-block;
+  margin-top: 10px;
+  background: #ffcc00;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* CLEAR FLOAT */
+.bd-list-card::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* TABLET */
+@media(max-width: 900px){
+  .bd-list-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* =========================
+   MOBILE FIX - CLEAN TITLES + BALANCE
+========================= */
+
+@media(max-width: 600px){
+
+  .bd-list-grid{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .bd-list-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    text-align: center;
+    min-height: 180px; /* equal card height */
+  }
+
+  /* REMOVE LEFT LINE */
+  .bd-list-card::before{
+    display: none;
+  }
+
+  /* IMAGE */
+  .bd-list-card img{
+    width: 70px;
+    margin: 6px auto;
+  }
+
+  /* TITLE FIX (IMPORTANT) */
+  .bd-list-card h3{
+    font-size: 13px;
+    line-height: 1.3;
+    margin: 6px 0;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;   /* max 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    min-height: 34px; /* equal spacing */
+  }
+
+  /* PRICE */
+  .bd-list-card .deal-price{
+    font-size: 13.5px;
+    font-weight: 600;
+  }
+
+  .bd-list-card .old-price{
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+
+  /* BUTTON */
+  .bd-list-card .deal-btn{
+    font-size: 11.5px;
+    padding: 5px 10px;
+    margin-top: 6px;
+  }
+
+}
+/* =========================
+   MOBILE ONLY - NEW STYLE (FINAL)
+========================= */
+
+@media(max-width:600px){
+
+  .bd-list-card{
+
+    /* CLEAN DIFFERENT COLOR */
+    background: #fff8f0;  /* soft warm ivory */
+
+    border: 1px solid #ffe2c2;
+
+    box-shadow: 0 6px 14px rgba(255, 170, 80, 0.12);
+
+    border-radius: 14px;
+  }
+
+  .bd-list-card:hover{
+    background: #fff3e6;
+  }
+
+}
+.popular-section .bd-card{
+  background: #f2fbf7 !important;
+  border: 1px solid #d8f3e8 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;
+}
+
+.popular-section .bd-card:hover{
+  background: #e6f7f0 !important;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+}
+/* FORCE STRIKETHROUGH FOR ALL MRP */
+.bd-card .old-price,
+.bd-list-card .old-price{
+  text-decoration-line: line-through !important;
+  text-decoration-thickness: 1px !important;
+  text-decoration-color: #9e9e9e !important;
+  color: #9e9e9e !important;
