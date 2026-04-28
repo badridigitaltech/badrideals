@@ -1,0 +1,65 @@
+.wa-section{
+text-align:center;
+margin:30px 0;
+}
+
+.wa-heading{
+font-size:18px;
+font-weight:600;
+margin-bottom:14px;
+text-align:center;
+}
+
+.wa-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+background:#25D366;
+color:#fff;
+padding:12px 22px;
+border-radius:8px;
+font-size:16px;
+font-weight:600;
+text-decoration:none !important;
+transition:all 0.3s ease;
+position:relative;
+overflow:hidden;
+}
+
+/* hover lift + shadow */
+.wa-btn:hover{
+background:#1ebe5d;
+transform:translateY(-2px) scale(1.03);
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* icon */
+.wa-icon{
+width:20px !important;
+height:20px !important;
+object-fit:contain;
+display:inline-block;
+transition:transform 0.3s ease;
+}
+
+/* icon hover animation */
+.wa-btn:hover .wa-icon{
+transform:scale(1.15) rotate(5deg);
+}
+
+/* shine effect */
+.wa-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg, transparent, rgba(255,255,255,0.4), transparent);
+transition:all 0.5s ease;
+}
+
+.wa-btn:hover::before{
+left:100%;
+}
